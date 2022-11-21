@@ -1,6 +1,8 @@
 # Techy - Client
 ### <a href='https://github.com/ange1026/Techy-API'>Techy - API</a>
 
+Techy News is a website where we can find the latest news on technology and software. It uses a public source API called <a href='https://newsapi.org/'>News API</a>.
+
 <hr>
 
 ## Wireframes
