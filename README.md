@@ -45,3 +45,8 @@ Techy News is a website where we can find the latest news on technology and soft
 - To be able to see my saved articles.
 - To be able to delete a saved article.
 
+## Schedule
+
+For the first week I plan to work on all the Back-end routes and functionality.
+
+For the second week front-end and finishing touches.
