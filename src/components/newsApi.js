@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import ShowArticles from "./showArticles";
 
+
 const NewsApi = () => {
     const [articles, setArticles] = useState([])
 
@@ -22,6 +23,7 @@ const NewsApi = () => {
                         description={article.description}
                         url={article.url}
                         urlToImage={article.urlToImage}
+                        content={article.content}
                     />
                 )
             })}

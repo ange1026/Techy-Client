@@ -18,15 +18,18 @@ const authenticatedOptions = (
 				Sign Out
 			</Link>
 		</Nav.Item>
+		<Nav.Item>
+			<Link to='saved-articles' style={linkStyle}>Saved</Link>
+		</Nav.Item>
 	</>
 )
 
 const unauthenticatedOptions = (
 	<>
-        <Nav.Item>
+        <Nav.Item style={{margin: '10px'}}>
 		    <Link to='sign-up' style={linkStyle}>Sign Up</Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item style={{margin: '10px'}}>
 		    <Link to='sign-in' style={linkStyle}>Sign In</Link>
         </Nav.Item>
 	</>
@@ -57,6 +60,8 @@ const Header = ({ user }) => (
 				)}
 				{alwaysOptions}
 				{user ? authenticatedOptions : unauthenticatedOptions}
+
+				<input style={{textAlign: 'left'}} placeholder='search'></input>
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>
