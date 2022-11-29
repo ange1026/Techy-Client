@@ -4,14 +4,15 @@ import { Card } from "react-bootstrap";
 
 const ShowArticles = ({title, description, url, urlToImage, content}) => {
     return (
-        <>
-            <Card style={{width: '400px', height: '400px', margin: '20px', overflow: 'auto', padding: '10px', display: 'flex'}}>
+        <div style={{display: 'inline-block'}}>
+            
+            <Card style={{width: '300px', height: '200px', overflow: 'auto'}}>
             <img src={urlToImage} alt={urlToImage}/>
             <h3><a href={url}>{title}</a></h3>
             <p>{description}</p>
-            <p>{content}</p>
             </Card>
-        </>
+           
+        </div>
     )
 }
 
