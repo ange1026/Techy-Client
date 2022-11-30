@@ -1,6 +1,7 @@
 // import React, { Component } from 'react'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { signUp, signIn } from '../../api/auth'
 import messages from '../shared/AutoDismissAlert/messages'
@@ -56,23 +57,24 @@ const SignUp = (props) => {
 
 
     return (
-        <div className='row'>
-            <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+        <div style={{display: 'flex', textAlign: 'center', justifyContent: 'center', marginTop: '175px'}}>
+        <div className="signup-div">
+        <div className='row' style={{marginTop: '70px'}}>
+            <div className='col-sm-5 col-md-8 mx-auto'>
                 <h3>Sign Up</h3>
                 <Form onSubmit={onSignUp}>
                     <Form.Group controlId='email'>
-                        <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required
                             type='email'
                             name='email'
                             value={email}
-                            placeholder='Enter email'
+                            placeholder='Email'
                             onChange={e => setEmail(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
                     <Form.Group controlId='password'>
-                        <Form.Label>Password</Form.Label>
                         <Form.Control
                             required
                             name='password'
@@ -80,10 +82,10 @@ const SignUp = (props) => {
                             type='password'
                             placeholder='Password'
                             onChange={e => setPassword(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
                     <Form.Group controlId='passwordConfirmation'>
-                        <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control
                             required
                             name='passwordConfirmation'
@@ -91,13 +93,17 @@ const SignUp = (props) => {
                             type='password'
                             placeholder='Confirm Password'
                             onChange={e => setPasswordConfirmation(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
+                    <Link to='sign-in' style={{margin: '10px'}}>Sign In</Link>
                     <Button variant='primary' type='submit'>
                         Submit
                     </Button>
                 </Form>
             </div>
+        </div>
+        </div>
         </div>
     )
 
