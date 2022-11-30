@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { signIn } from '../../api/auth'
 import messages from '../shared/AutoDismissAlert/messages'
@@ -55,23 +56,24 @@ const SignIn = (props) => {
 	}
 
     return (
-        <div className='row'>
-            <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+        <div style={{display: 'flex', textAlign: 'center', justifyContent: 'center', marginTop: '175px'}}>
+        <div className='signin-div'>
+        <div className='row' style={{marginTop: '70px'}}>
+            <div className='col-sm-5 col-md-8 mx-auto mt-auto'>
                 <h3>Sign In</h3>
                 <Form onSubmit={onSignIn}>
                     <Form.Group controlId='email'>
-                        <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required
                             type='email'
                             name='email'
                             value={email}
-                            placeholder='Enter email'
+                            placeholder='Email'
                             onChange={e => setEmail(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
                     <Form.Group controlId='password'>
-                        <Form.Label>Password</Form.Label>
                         <Form.Control
                             required
                             name='password'
@@ -79,13 +81,17 @@ const SignIn = (props) => {
                             type='password'
                             placeholder='Password'
                             onChange={e => setPassword(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
+                    <Link to='sign-up' style={{margin: '10px'}}>Sign Up</Link>
                     <Button variant='primary' type='submit'>
                         Submit
                     </Button>
                 </Form>
             </div>
+        </div>
+        </div>
         </div>
     )
 }
