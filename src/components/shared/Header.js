@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
+import SearchBar from '../SearchBar'
 const linkStyle = {
     color: 'white',
     textDecoration: 'none'
@@ -21,6 +24,7 @@ const authenticatedOptions = (
 		<Nav.Item>
 			<Link to='saved-articles' style={linkStyle}>Saved</Link>
 		</Nav.Item>
+		
 	</>
 )
 
@@ -46,8 +50,8 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
-		<Navbar.Brand>
+	<Navbar bg='dark' variant='dark' expand='md'>
+		<Navbar.Brand style={{padding: '10px'}}>
             <Link to='/' style={linkStyle}>
                 Techy
             </Link>
@@ -58,10 +62,11 @@ const Header = ({ user }) => (
 				{user && (
 					<span className='navbar-text mr-2'>Welcome, {user.email}</span>
 				)}
+
 				{alwaysOptions}
 				{user ? authenticatedOptions : unauthenticatedOptions}
 
-				<input style={{textAlign: 'left'}} placeholder='search'></input>
+					<SearchBar />
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>
