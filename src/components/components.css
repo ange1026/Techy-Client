@@ -96,3 +96,23 @@ padding: 10px;
 .save-button {
     width: 50px;
 }
+
+/* ////////////// CHANGE PASSWORD ///////////// */
+
+.password-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 175px;
+}
+
+.password-div {
+    border-radius: 23px;
+    background: #ffffff;
+    box-shadow:  -13px 13px 26px #bebebe,
+                 -13px -13px 26px #ffffff;
+
+width: 400px;
+height: 400px;
+padding: 10px;
+}

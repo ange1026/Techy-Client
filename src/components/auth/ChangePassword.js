@@ -53,12 +53,13 @@ const ChangePassword = (props) => {
 
 
     return (
-        <div className='row'>
-            <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+        <div className="password-container">
+        <div className='password-div'>
+        <div className='row' style={{marginTop: '70px'}}>
+            <div className='col-sm-5 col-md-8 mx-auto mt-auto'>
                 <h3>Change Password</h3>
                 <Form onSubmit={onChangePassword}>
                     <Form.Group controlId='oldPassword'>
-                        <Form.Label>Old password</Form.Label>
                         <Form.Control
                             required
                             name='oldPassword'
@@ -66,10 +67,10 @@ const ChangePassword = (props) => {
                             type='password'
                             placeholder='Old Password'
                             onChange={e => setOldPassword(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
                     <Form.Group controlId='newPassword'>
-                        <Form.Label>New Password</Form.Label>
                         <Form.Control
                             required
                             name='newPassword'
@@ -77,6 +78,7 @@ const ChangePassword = (props) => {
                             type='password'
                             placeholder='New Password'
                             onChange={e => setNewPassword(e.target.value)}
+                            style={{marginBottom: '10px'}}
                         />
                     </Form.Group>
                     <Button variant='primary' type='submit'>
@@ -84,6 +86,9 @@ const ChangePassword = (props) => {
                     </Button>
                 </Form>
             </div>
+        </div>
+
+        </div>
         </div>
     )
 }
