@@ -57,7 +57,7 @@ const SignUp = (props) => {
 
 
     return (
-        <div style={{display: 'flex', textAlign: 'center', justifyContent: 'center', marginTop: '175px'}}>
+        <div className="signup-container">
         <div className="signup-div">
         <div className='row' style={{marginTop: '70px'}}>
             <div className='col-sm-5 col-md-8 mx-auto'>
