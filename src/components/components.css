@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+
+/* ////////////// SIGN UP ///////////// */
+
+.signup-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 175px;
+}
+
+.signup-div {
+    border-radius: 23px;
+    background: #ffffff;
+    box-shadow:  -13px 13px 26px #bebebe,
+                 -13px -13px 26px #ffffff;
+
+width: 400px;
+height: 400px;
+padding: 10px;
+}
+
+/* ////////////// SIGN IN ///////////// */
+
+.signin-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 175px;
+}
+
+.signin-div {
+    border-radius: 23px;
+    background: #ffffff;
+    box-shadow:  -13px 13px 26px #bebebe,
+                 -13px -13px 26px #ffffff;
+
+width: 400px;
+height: 400px;
+padding: 10px;
+}
+
+
+/* ////////////// HOME PAGE ///////////// */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.home-img {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    margin: 15px;
+}
+
+.home-div {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    color: blue;
+}
+
+/* ////////////// ARTICLES ///////////// */
+
+.article-container {
+    display: inline-block;
+}
+
+.article-card {
+    width: 400px;
+    height: 600px;
+    margin: 15px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.buttons-container {
+    display: inline-block;
+    text-align: center;
+
+}
+
+.readmore-button {
+    margin-right: 10px;
+    width: 150px;
+}
+
+.link-button {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.save-button {
+    width: 50px;
+}
