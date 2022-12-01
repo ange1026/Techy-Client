@@ -56,7 +56,7 @@ const SignIn = (props) => {
 	}
 
     return (
-        <div style={{display: 'flex', textAlign: 'center', justifyContent: 'center', marginTop: '175px'}}>
+        <div className="signin-container">
         <div className='signin-div'>
         <div className='row' style={{marginTop: '70px'}}>
             <div className='col-sm-5 col-md-8 mx-auto mt-auto'>
