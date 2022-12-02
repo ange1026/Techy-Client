@@ -52,7 +52,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Link>
-			<Link to='/' style={linkStyle}>
+			<Link to='/news' style={linkStyle}>
 				Home
 			</Link>
 		</Nav.Link>

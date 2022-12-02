@@ -85,6 +85,10 @@ const App = () => {
 						</RequireAuth>
 					}
 				/>
+				<Route
+					path='/news'
+					element={<Home resetSearch={resetSearch} searchQuery={searchQuery} msgAlert={msgAlert} user={user} />}
+				/>
 			</Routes>
 			{msgAlerts.map((msgAlert) => (
 				<AutoDismissAlert
