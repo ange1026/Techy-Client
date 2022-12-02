@@ -1,35 +1,47 @@
+import React, { useEffect, useState } from "react"
 import NewsApi from "./NewsApi"
 import { Pagination } from "react-bootstrap";
-import AdvancedExample from "./Pagination";
 import IMAGE from '../images/tech-img.jpg'
 
 
-const Home = (props) => {
-	// const { msgAlert, user } = props
-	console.log('props in home', props)
 
-	let active = 2;
+const Home = ({ searchQuery }) => {
+	console.log(searchQuery)
+	// const { msgAlert, user } = props
+	// console.log('props in home', props)
+	const [page, setPage] = useState(1);
+	const [search, setSearch] = useState('')
+
+	useEffect(() => {
+		setSearch(searchQuery)
+	}, [searchQuery])
+
+	const onPagination = page => {
+		window.scrollTo({ top: 0 });
+		setPage(page)
+	}
+
 	let items = [];
 	for (let number = 1; number <= 5; number++) {
 		items.push(
-			<Pagination.Item key={number} active={number === active}>
+			<Pagination.Item key={number} active={number === page} onClick={() => onPagination(number)}>
 				{number}
 			</Pagination.Item>,
 		);
 	}
 	const paginationBasic = (
-		<div>
-		  <Pagination>{items}</Pagination>
-		  </div>
+		<div className="pagination">
+			<Pagination size='lg'>{items}</Pagination>
+		</div>
 	)
 
 	return (
 		<>
 			<div>
-				<img src={IMAGE} alt='' style={{width: '100%', maxWidth: '100%', height: '500px', margin: '15px'}}/>
-				<div style={{position: 'absolute', bottom: '10px', left: '18px', color: 'blue'}}>A place where you can find the latest news in tech.</div>
+				<img src={IMAGE} alt='' className="home-img" />
+				<div className="home-div">A place where you can find the latest news in tech.</div>
 			</div>
-			<NewsApi />
+			<NewsApi page={page} searchQuery={search} />
 			{paginationBasic}
 
 

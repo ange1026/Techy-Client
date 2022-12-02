@@ -10,17 +10,17 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 const ShowArticles = ({ title, description, url, urlToImage, content }) => {
     return (
         <>
-            <div style={{ display: 'inline-block' }}>
+            <div className="article-container">
                 <div>
-                    <Card style={{ width: '400px', height: '600px', margin: '15px', overflow: 'auto', border: 'none' }}>
+                    <Card className='article-card'>
                         <img src={urlToImage} />
-                        <h5 style={{ color: 'white' }}><a href={url}>{title}</a></h5>
+                        <h5><a href={url}>{title}</a></h5>
                         <p>{description}</p>
-                        <div style={{ display: 'inline-block', textAlign: 'center' }}>
-                            <Button style={{ marginRight: '10px', width: '150px' }}>
-                                <a href={url} style={{ color: 'white', fontWeight: 'bold', textDecoration: 'none' }}>Read More</a>
+                        <div className="buttons-container">
+                            <Button className="readmore-button">
+                                <a href={url} className="link-button">Read More</a>
                             </Button>
-                            <Button style={{ width: '50px' }}>
+                            <Button className="save-button">
                                 <FontAwesomeIcon icon={faBookmark} />
                             </Button>
                         </div>
