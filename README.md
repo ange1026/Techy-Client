@@ -50,3 +50,20 @@ Techy News is a website where we can find the latest news on technology and soft
 For the first week I plan to work on all the Back-end routes and functionality.
 
 For the second week front-end and finishing touches.
+
+## Installed Dependencies
+
+Installing npm
+```
+ npm install
+```
+Installing Font Awesome
+```
+ npm install --save react-fontawesome
+```
+### Project Journey
+
+One of the first things that I did was call the NewsAPI on the front-end. The documentation was fairly easy I just had a little set-back when I was trying to connect it to the search bar, which was one of my next obstacles.
+
+When trying to connect the api to the search bar I realized that it wasn't working because the search bar and the api were in a different set of components. After reading the docs and watching some tutorials I got it to work without me having to rearrange the components.
+
