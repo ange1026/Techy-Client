@@ -16,7 +16,9 @@ import SavedArticles from './components/SavedArticles'
 
 
 const App = () => {
+//you need to make sure you're putting comments in your code to make things more legible! 
 
+//great job with organization
 	const [user, setUser] = useState(null)
 	const [msgAlerts, setMsgAlerts] = useState([])
 	const [searchQuery, setSearchQuery] = useState('');
